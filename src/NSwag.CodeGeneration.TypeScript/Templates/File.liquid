@@ -32,7 +32,12 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpResponseBase{% if IncludeHtt
 import { Http, Headers, ResponseContentType, Response{% if UseTransformOptionsMethod %}, RequestOptionsArgs{% endif %} } from '@angular/http';
 {%-            endif -%}
 {%-        endif -%}
-{%-        if Framework.IsAurelia -%}
+    {%-        if Framework.IsOtel -%}
+    {% raw %}
+        import { Context,context } from '@opentelemetry/api';
+    {% endraw %}
+    {%-        endif -%}
+    {%-        if Framework.IsAurelia -%}
 
 import { inject } from 'aurelia-framework';
 import { HttpClient, RequestInit } from 'aurelia-fetch-client';

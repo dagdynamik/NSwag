@@ -28,6 +28,9 @@ namespace NSwag.CodeGeneration.TypeScript
 
         /// <summary>Uses the Aurelia fetch service.</summary>
         Aurelia,
+        
+        /// <summary>Uses the Otel fetch service.</summary>
+        Otel,
 
         /// <summary>Uses the Axios service.</summary>
         Axios,

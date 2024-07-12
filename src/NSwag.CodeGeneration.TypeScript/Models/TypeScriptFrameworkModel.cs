@@ -29,6 +29,8 @@ namespace NSwag.CodeGeneration.TypeScript.Models
         /// <summary>Gets a value indicating whether the generated code is for Aurelia.</summary>
         public bool IsAurelia => _settings.Template == TypeScriptTemplate.Aurelia;
 
+        /// <summary>Gets a value indicating whether the generated code is for OtelClient.</summary>
+        public bool IsOtel => _settings.Template == TypeScriptTemplate.Otel;
         /// <summary>Gets a value indicating whether the generated code is for Angular.</summary>
         public bool IsAngularJS => _settings.Template == TypeScriptTemplate.AngularJS;
 
@@ -40,7 +42,7 @@ namespace NSwag.CodeGeneration.TypeScript.Models
 
         /// <summary>Gets a value indicating whether to render for Fetch or Aurelia</summary>
         public bool IsFetchOrAurelia => _settings.Template == TypeScriptTemplate.Fetch ||
-                                        _settings.Template == TypeScriptTemplate.Aurelia;
+                                        _settings.Template == TypeScriptTemplate.Aurelia ||  _settings.Template == TypeScriptTemplate.Otel ;
 
         /// <summary>Gets a value indicating whether to render for Axios.</summary>
         public bool IsAxios => _settings.Template == TypeScriptTemplate.Axios;
